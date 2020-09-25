@@ -6,8 +6,5 @@ def compute_loss(y, tx, w):
 
     You can calculate the loss using mse or mae.
     """
-    # ***************************************************
-    # INSERT YOUR CODE HERE
-    # TODO: compute loss by MSE / MAE
-    # ***************************************************
-    raise NotImplementedError
+    e = y - tx @ w
+    return e.T @ e / (2 * len(y))
