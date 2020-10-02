@@ -2,7 +2,7 @@
 """ Grid Search"""
 
 import numpy as np
-import costs
+from ex02 import costs
 
 
 def generate_w(num_intervals):
@@ -23,5 +23,5 @@ def grid_search(y, tx, w0, w1):
     losses = np.zeros((len(w0), len(w1)))
     for i0, w0_tmp in enumerate(w0) :
         for i1, w1_tmp in enumerate(w1) :
-            losses[i0, i1] = compute_loss(y, tx, np.array([w0_tmp, w1_tmp]))
+            losses[i0, i1] = costs.compute_loss(y, tx, np.array([w0_tmp, w1_tmp]))
     return losses
