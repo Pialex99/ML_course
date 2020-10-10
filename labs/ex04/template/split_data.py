@@ -20,4 +20,4 @@ def split_data(x, y, ratio, seed=1):
     idx_tr = indexes[:split]
     idx_te = indexes[split:]
     
-    return x[idx_tr], x[idx_te], y[idx_tr], y[idx_te]ß
+    return x[idx_tr], x[idx_te], y[idx_tr], y[idx_te]
